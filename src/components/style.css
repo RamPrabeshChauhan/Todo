@@ -1,0 +1,126 @@
+/* 
+    font-family: 'Lato', sans-serif;
+    font-family: 'Neucha', cursive;
+
+
+    #343A40 = Black
+    #7952B3 = Purple
+    #FFC107 = Yellow
+    #E1E8EB = Gray
+
+*/
+
+.input_container {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.input_box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+}
+
+.input_box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.185);
+    outline: none;
+}
+
+.input_submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #343a40;
+    color: #e1e8eb;
+    transition: 0.2s all;
+    box-shadow: 0010px black;
+}
+
+.input_submit:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+.input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+.todos {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+/* .todos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+
+    width: 90%;
+    padding-top: 1rem;
+} */
+
+/* ──────────────────────────────────────────────────────────────────────────────── */
+
+.todos_single {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #ffc107;
+}
+
+.todos_single_text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    color: #343a40;
+    font-family: "Lato", sans-serif;
+}
+
+.todos_single_text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.623);
+}
+
+@media (max-width: 1200px) {
+    .todos_single {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+    }
+    .todos_single {
+        width: 100%;
+    }
+}
